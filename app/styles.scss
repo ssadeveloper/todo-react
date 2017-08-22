@@ -1,15 +1,38 @@
+$font-weight-book: 300;
+$font-weight-medium: 500;
+$font-weight-heavy: 800;
+
 @font-face {
-  font-family: 'Avenir-Book';
-  src: url('../assets/fonts/Avenir/Avenir-Book.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Avenir';
+	src: url('../assets/fonts/Avenir-Medium.eot');
+	src: url('../assets/fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Avenir-Medium.woff') format('woff'),
+		url('../assets/fonts/Avenir-Medium.ttf') format('truetype'),
+		url('../assets/fonts/Avenir-Medium.svg#Avenir-Medium') format('svg');
+	font-weight: $font-weight-medium;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src: url('../assets/fonts/Avenir/Avenir-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-size: normal;
+	font-family: 'Avenir';
+	src: url('../assets/fonts/Avenir-Heavy.eot');
+	src: url('../assets/fonts/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Avenir-Heavy.woff') format('woff'),
+		url('../assets/fonts/Avenir-Heavy.ttf') format('truetype'),
+		url('../assets/fonts/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
+	font-weight: $font-weight-heavy;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('../assets/fonts/Avenir-Book.eot');
+	src: url('../assets/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Avenir-Book.woff') format('woff'),
+		url('../assets/fonts/Avenir-Book.ttf') format('truetype'),
+		url('../assets/fonts/Avenir-Book.svg#Avenir-Book') format('svg');
+	font-weight: $font-weight-book;
+	font-style: normal;
 }
 
 :global(*) {

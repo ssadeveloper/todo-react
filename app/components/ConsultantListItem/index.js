@@ -7,9 +7,9 @@ export default class ConsultantListItem extends React.Component {
     const { consultant } = this.props
     return (
       <li className={ styles.consultantInfo }>
-        <img className={ styles.consultantAvatar } src={ consultant.avatar } />
-        <span className={ styles.consultantName }>{ consultant.name }</span>
-        <span className={ styles.consultantTitle }>{ consultant.title }</span>
+        <img className={ styles.avatar } src={ consultant.avatar } />
+        <span className={ styles.name }>{ consultant.name }</span>
+        <span className={ styles.title }>{ consultant.title }</span>
       </li>
     )
   }
