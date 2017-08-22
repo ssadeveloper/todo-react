@@ -1,0 +1,131 @@
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.flexGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+
+///////////
+
+.headerContainer {
+  height: 70px;
+  background-image: linear-gradient(to right, #009966, #009985), linear-gradient(#009966, #009966);
+}
+
+.inner {
+  width: 1190px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  composes: flexGroup;
+  justify-content: space-between;
+}
+
+.separator {
+  height: 30px;
+  width: 1px;
+  background: #000;
+  opacity: 0.15;
+  margin: 0 20px;
+}
+
+.dropdown {
+  color: #fff;
+  flex: none;
+  cursor: pointer;
+  
+  .dropdownIcon {
+    width: 12px;
+    height: 9px;
+    margin-left: 11px;
+    padding-bottom: 2px;
+  }
+}
+
+.iconLink {
+  img {
+    height: 22px;
+    width: auto;
+    vertical-align: top;
+  }
+}
+
+
+///////////
+
+.leftHeaderGroup {
+  composes: flexGroup;
+  height: 70px;
+  
+  .dropdown {
+    
+  }
+}
+
+.logo {
+  cursor: pointer;
+  height: 24px;
+  
+  img {
+    height: 100%;
+    width: auto;
+    vertical-align: top;
+  }
+}
+
+.appsDropdown {
+  composes: dropdown;
+  opacity: .8;
+}
+
+.sessionsButton {
+  border-radius: 2px;
+  background-color: rgba(0,0,0,.15);
+  padding: 8px 14px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-left: -14px;
+}
+
+
+///////////
+
+.rightHeaderGroup {
+  composes: flexGroup;
+  height: 70px;
+  
+  .separator {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.userDropdown {
+  composes: dropdown;
+  composes: flexGroup;
+  font-weight: 500;
+  
+  .userAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+}
