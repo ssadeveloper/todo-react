@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url('../assets/fonts/Avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/Avenir/Avenir-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
+}
+
+:global(*) {
+  box-sizing: border-box;
+}
+
+:global(html) {
+  height: 100%;
+}
+
+:global(body) {
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  // font smoothing in webkit and firefox
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7faf8;
+  height: 100%;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+///////////
+
+.button {
+  border-radius: 2px;
+  border: solid 2px rgba(0,0,0,.3);
+  padding: 15px 17px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(0,0,0,.9);
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.pageContent {
+  padding: 30px 0;
+}
+
+.inner {
+  width: 790px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  line-height: 33px;
+  font-family: Avenir;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.buttonsGroup {
+  display: block;
+  margin-top: 20px;
+  composes: clearfix;
+}
+
+.cancelButton {
+  float: left;
+  composes: button;
+}
+
+.nextButton {
+  float: right;
+  composes: button;
+  background-color: #008cfd;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  border-color: #008cfd;
+  color: #ffffff;
+}
